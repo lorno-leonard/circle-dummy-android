@@ -1,6 +1,6 @@
 test:
   override:
-    - $ANDROID_HOME/tools/emulator -avd testing -no-window -no-boot-anim -no-audio:
+    - emulator -avd circleci-android21 -no-audio -no-window:
         background: true
         parallel: true
     - ./gradlew assembleDebugTest
