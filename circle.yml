@@ -15,4 +15,6 @@ test:
         parallel: true
     - ./gradlew assembleDebug
     - bin/android-wait-for-emulator
-    - bin/run-tests test.namespace
+    # - bin/run-tests test.namespace
+    - (echo "Running JUnit tests!")
+    - (./gradlew connectedAndroidTest)
